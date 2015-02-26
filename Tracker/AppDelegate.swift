@@ -15,12 +15,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+   /* func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         GMSServices.provideAPIKey("AIzaSyCmKN-tiidxmKa7JFxdkqWXpPcDmLUl5n4");
         // Override point for customization after application launch.
         return true
+    }*/
+    
+    ////////
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyCmKN-tiidxmKa7JFxdkqWXpPcDmLUl5n4");
+
+        if(application.respondsToSelector("isRegisteredForRemoteNotifications")){
+            UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: (.Alert | .Badge | .Alert), categories: nil))
+            println("User")
+            application.registerForRemoteNotifications()
+            
+            
+        }else{
+            println("UserNo")
+            UIApplication.sharedApplication().registerForRemoteNotificationTypes(UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound)
+        }
+        
+        
+        return true
     }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        
+        application.registerForRemoteNotifications()
+    }
+    
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        println("registered")
+        var deviceTokenString: NSString = NSString(format: "%@", deviceToken)
+        NSLog("device token is %@", deviceToken)
+        
+    }
+    
+    
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        NSLog("%@", error)
+    }
+    
+    
+    ////////
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

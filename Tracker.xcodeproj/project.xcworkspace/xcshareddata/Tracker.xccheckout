@@ -12,20 +12,24 @@
 	<dict>
 		<key>002C20E6449B2F384290BF7DA20BE8CE4FCFE270</key>
 		<string>https://bitbucket.org/niteshanandan-admin/trackerapp.git</string>
+		<key>7BCA5BD4A586DF6F3B4EF04618EF48FBC8D9BDCF</key>
+		<string>https://github.com/nanandan/Tracker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>trackerClient/Tracker/Tracker.xcodeproj</string>
+	<string>Tracker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>002C20E6449B2F384290BF7DA20BE8CE4FCFE270</key>
 		<string>../../../..</string>
+		<key>7BCA5BD4A586DF6F3B4EF04618EF48FBC8D9BDCF</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/niteshanandan-admin/trackerapp.git</string>
+	<string>https://github.com/nanandan/Tracker.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>002C20E6449B2F384290BF7DA20BE8CE4FCFE270</string>
+	<string>7BCA5BD4A586DF6F3B4EF04618EF48FBC8D9BDCF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>002C20E6449B2F384290BF7DA20BE8CE4FCFE270</string>
 			<key>IDESourceControlWCCName</key>
-			<string>trackerApp</string>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7BCA5BD4A586DF6F3B4EF04618EF48FBC8D9BDCF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Tracker</string>
 		</dict>
 	</array>
 </dict>
